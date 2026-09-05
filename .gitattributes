@@ -1,0 +1,6 @@
+# Normalise to LF in the repo so the site is byte-identical when served
+# from a Linux host (GitHub Pages, Netlify, any CDN).
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.svg text eol=lf
