@@ -39,6 +39,24 @@
 
 <div class="cursor" aria-hidden="true"></div>
 <div class="cursor-dot" aria-hidden="true"></div>
+<!-- ===== star trail (home only) ================================== -->
+<div class="trail" data-trail aria-hidden="true">
+  <svg data-trail-svg preserveAspectRatio="none" focusable="false">
+    <defs>
+      <linearGradient id="trailGrad" data-trail-grad gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="900">
+        <stop offset="0%"   stop-color="#d6b472" stop-opacity="0.12"/>
+        <stop offset="55%"  stop-color="#d6b472" stop-opacity="0.5"/>
+        <stop offset="100%" stop-color="#ecd9ae" stop-opacity="0.95"/>
+      </linearGradient>
+    </defs>
+    <path class="trail__ghost" d=""/>
+    <path class="trail__glow" d=""/>
+    <path class="trail__line" d=""/>
+    <circle class="trail__halo" cx="0" cy="0" r="8"/>
+    <circle class="trail__head" cx="0" cy="0" r="2.6"/>
+  </svg>
+</div>
+
 <div class="grain" aria-hidden="true"></div>
 
 <!-- ===== nav ===================================================== -->
@@ -639,6 +657,7 @@
 
 <script src="assets/js/anime.iife.min.js"></script>
 <script src="assets/js/starfield.js"></script>
+<script src="assets/js/trail.js"></script>
 <script src="assets/js/orion.js"></script>
 </body>
 </html>

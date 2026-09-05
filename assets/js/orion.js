@@ -1282,12 +1282,21 @@
     var field = null;
     if (win.OrionStarfield) field = win.OrionStarfield.build($("[data-sky]"));
 
+    var trail = null;
+    if (win.OrionTrail) trail = win.OrionTrail.build($("[data-trail]"));
+
     /* Reveals wait for the curtain: an observer fires the moment it sees an
        element, and anything above the fold would otherwise play out of sight
        behind the preloader. */
     Curtain.intro(function () {
       heroIntro(field);
       initReveals();
+      /* The trail measures against the settled layout, then fades in with the
+         hero instead of being there before the page arrives. */
+      if (trail) {
+        trail.remeasure();
+        win.setTimeout(trail.reveal, 240);
+      }
     });
   }
 

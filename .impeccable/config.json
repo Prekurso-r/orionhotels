@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "dark-glow",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-05T07:11:49.135Z",
+        "reason": "Claude: star-light glow is domain-literal here - .trail__node.is-lit depicts a star igniting on the star trail, matching .constellation__star and the hero star field, which use the same #ecd9ae halo but are injected by JS so the static scan never saw them"
+      }
+    ]
+  }
+}
