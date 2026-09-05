@@ -486,6 +486,13 @@
     var rx = mx, ry = my, dx = mx, dy = my;
     var ready = false;
 
+    /* The ring is a fixed 34px box; hover and drag sizes are multiples of it,
+       eased here rather than by transitioning width/height/margin. */
+    var RING = 34;
+    var SCALE_HOVER = 78 / RING;
+    var SCALE_DRAG = 96 / RING;
+    var scale = 1;
+
     on(win, "pointermove", function (e) {
       mx = e.clientX; my = e.clientY;
       if (!ready) {
@@ -510,7 +517,14 @@
       ry += (my - ry) * 0.16;
       dx += (mx - dx) * 0.42;
       dy += (my - dy) * 0.42;
-      ring.style.transform = "translate3d(" + rx.toFixed(2) + "px," + ry.toFixed(2) + "px,0)";
+
+      var list = doc.body.classList;
+      var target = list.contains("cursor-drag") ? SCALE_DRAG
+                 : list.contains("cursor-hover") ? SCALE_HOVER : 1;
+      scale += (target - scale) * 0.14;
+
+      ring.style.transform =
+        "translate3d(" + rx.toFixed(2) + "px," + ry.toFixed(2) + "px,0) scale(" + scale.toFixed(4) + ")";
       dot.style.transform = "translate3d(" + dx.toFixed(2) + "px," + dy.toFixed(2) + "px,0)";
       win.requestAnimationFrame(loop);
     })();

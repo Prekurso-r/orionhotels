@@ -21,7 +21,7 @@
   --c-gold-deep:   #9c7b3c;
   --c-ivory:       #f3eee4;
   --c-mute:        #96918a;
-  --c-mute-2:      #6d6a66;
+  --c-mute-2:      #84807a;   /* AA on every ink shade: 4.88-5.19:1 */
 
   /* Hairlines */
   --c-line:        rgba(214, 180, 114, 0.18);
@@ -348,23 +348,39 @@ a {
 }
 .btn:hover::before, .btn:focus-visible::before { transform: scaleY(1); }
 
+/* The arrow reserves its extended length and draws inside it: the shaft
+   scales, the head slides. Growing the element itself re-laid-out the whole
+   button on every hover. */
 .btn__arrow {
-  width: 1.1em;
-  height: 1px;
-  background: currentColor;
   position: relative;
-  transition: width var(--t-mid) var(--e-out);
+  width: 1.9em;
+  height: 5px;
+  flex: none;
+}
+.btn__arrow::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 50%;
+  width: 100%; height: 1px;
+  background: currentColor;
+  transform: translateY(-50%) scaleX(0.579);
+  transform-origin: 0 50%;
+  transition: transform var(--t-mid) var(--e-out);
 }
 .btn__arrow::after {
   content: "";
   position: absolute;
-  right: 0; top: 50%;
+  left: 0; top: 50%;
   width: 5px; height: 5px;
   border-top: 1px solid currentColor;
   border-right: 1px solid currentColor;
-  transform: translateY(-50%) rotate(45deg);
+  transform: translate(calc(1.1em - 5px), -50%) rotate(45deg);
+  transition: transform var(--t-mid) var(--e-out);
 }
-.btn:hover .btn__arrow { width: 1.9em; }
+.btn:hover .btn__arrow::before,
+.btn:focus-visible .btn__arrow::before { transform: translateY(-50%) scaleX(1); }
+.btn:hover .btn__arrow::after,
+.btn:focus-visible .btn__arrow::after { transform: translate(calc(1.9em - 5px), -50%) rotate(45deg); }
 
 .btn--solid {
   --btn-fg: var(--c-void);
@@ -470,11 +486,11 @@ body.menu-open .nav {
 }
 .brand__sub {
   display: none;
-  font-size: 0.5625rem;
-  letter-spacing: 0.3em;
+  font-size: var(--fs-eyebrow);
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   color: var(--c-mute-2);
-  margin-top: 0.35em;
+  margin-top: 0.3em;
 }
 @media (min-width: 640px) { .brand__sub { display: block; } }
 
@@ -551,12 +567,16 @@ body.menu-open .nav {
   width: 100%;
   height: 1px;
   background: currentColor;
-  transition: transform var(--t-mid) var(--e-out), opacity var(--t-fast) var(--e-out), width var(--t-mid) var(--e-out);
+  transition: transform var(--t-mid) var(--e-out), opacity var(--t-fast) var(--e-out);
 }
 .menu-btn__bars span:nth-child(1) { top: 0; }
-.menu-btn__bars span:nth-child(2) { top: 50%; width: 62%; }
+.menu-btn__bars span:nth-child(2) {
+  top: 50%;
+  transform-origin: 0 50%;
+  transform: scaleX(0.62);
+}
 .menu-btn__bars span:nth-child(3) { top: 100%; }
-.menu-btn:hover .menu-btn__bars span:nth-child(2) { width: 100%; }
+.menu-btn:hover .menu-btn__bars span:nth-child(2) { transform: scaleX(1); }
 body.menu-open .menu-btn__bars span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
 body.menu-open .menu-btn__bars span:nth-child(2) { opacity: 0; }
 body.menu-open .menu-btn__bars span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
@@ -776,13 +796,14 @@ body.menu-open .menu-btn__bars span:nth-child(3) { transform: translateY(-6px) r
   opacity: 0;
   mix-blend-mode: difference;
 }
+/* The ring keeps one 34px box and is scaled by the rAF loop that already
+   writes its transform; growing width/height/margin laid out a fixed-position
+   element on every pointer move. */
 .cursor {
   width: 34px; height: 34px;
   margin: -17px 0 0 -17px;
   border: 1px solid rgba(243, 238, 228, 0.75);
-  transition: width 0.35s var(--e-out), height 0.35s var(--e-out),
-              margin 0.35s var(--e-out), background 0.35s var(--e-out),
-              border-color 0.35s var(--e-out);
+  transition: background 0.35s var(--e-out), border-color 0.35s var(--e-out);
 }
 .cursor-dot {
   width: 4px; height: 4px;
@@ -792,17 +813,14 @@ body.menu-open .menu-btn__bars span:nth-child(3) { transform: translateY(-6px) r
 body.cursor-ready .cursor,
 body.cursor-ready .cursor-dot { opacity: 1; }
 
+/* Size comes from the scale the loop applies; only colour changes here. */
 body.cursor-hover .cursor {
-  width: 78px; height: 78px;
-  margin: -39px 0 0 -39px;
   background: rgba(243, 238, 228, 0.12);
   border-color: transparent;
 }
 body.cursor-hover .cursor-dot { opacity: 0; }
 
 body.cursor-drag .cursor {
-  width: 96px; height: 96px;
-  margin: -48px 0 0 -48px;
   background: rgba(243, 238, 228, 0.1);
   border-color: rgba(243, 238, 228, 0.4);
 }

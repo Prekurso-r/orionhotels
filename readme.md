@@ -87,6 +87,13 @@ lerp in one rAF loop, because that is the right tool for per-frame following.
   stacks if they fail to load.
 - `prefers-reduced-motion` is honoured throughout: animations resolve
   immediately instead of being skipped, so nothing stays invisible.
+- All text meets WCAG AA. On a palette this dark that turns on one token:
+  `--c-mute-2` carries every tertiary label, form label and placeholder, and
+  is set to the lightest value the hierarchy allows while still clearing
+  4.5:1 on all four ink shades. Darken it and the reservation form fails.
+- Hover-only content has a touch fallback. The suite-card description
+  expands via `grid-template-rows` on hover and is shown unconditionally
+  under `(hover: none)`, where it would otherwise be unreachable.
 - With JavaScript disabled the whole site still renders and reads; only the
   generated star field is missing.
 - The star field container is `.sky`, not `.field` — the reservation form owns
