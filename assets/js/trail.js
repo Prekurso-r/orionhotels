@@ -18,10 +18,15 @@
    end. Mapping progress 0..1 onto the whole trail guarantees it completes
    exactly as the footer lands.
 
-   It runs down the left margin gutter. Behind the content it would be hidden
-   by every opaque section background; over the content it would cross the
-   text. The gutter is the one column that is always clear, so the base X and
-   amplitude are derived from the real computed gutter each resize.
+   It runs down the centre of the viewport, which means it crosses the text
+   column. That is survivable only because the layer is composited with
+   mix-blend-mode: screen: over the dark ground the brass reads at full
+   strength, and over bright type it saturates to the type's own colour and
+   disappears. The line therefore passes behind the words perceptually
+   without ever being painted behind them -- which it cannot be, since the
+   marquee, CTA, testimonial band and footer all paint opaque backgrounds.
+   Centring also buys room for a real meander; in the old gutter placement
+   the whole excursion had to fit in ~30px.
 
    Exposes: window.OrionTrail.build(root) -> handle | null
    ========================================================================== */
@@ -55,9 +60,10 @@
        Metrics — re-derived on resize and whenever the document grows
        (images finishing decode change scrollHeight).
        --------------------------------------------------------------- */
-    var vh = 0, docH = 0, trailEnd = 0;
-    var baseX = 22, amp = 8, limit = 48;
-    var bowR = 18, bowL = 16;   /* how far the bow may pull, each way */
+    var vh = 0, vw = 0, docH = 0, trailEnd = 0;
+    var baseX = 0, amp = 40;
+    var edgeMin = 40, edgeMax = 400;   /* the line never leaves the viewport */
+    var bowR = 120, bowL = 120;        /* how far the bow may pull, each way */
 
     function measure() {
       vh = win.innerHeight || 1;
@@ -67,21 +73,15 @@
       );
       trailEnd = Math.max(vh, docH - 40);
 
-      /* Keep the whole ribbon inside the real gutter. */
-      var wrap = doc.querySelector(".wrap");
-      var gutter = wrap ? parseFloat(win.getComputedStyle(wrap).paddingLeft) || 24 : 24;
+      vw = win.innerWidth || 1;
+      baseX = vw / 2;
 
-      /* Everything has to fit between the viewport edge and the text column,
-         so the gutter is a fixed budget shared by the meander and the bow.
-         Spend it explicitly; clamping later would flatten the curve against
-         an invisible wall instead. */
-      limit = Math.max(10, gutter - 8);
-      baseX = clamp(gutter * 0.42, 10, 34);
-      var room = Math.max(0, limit - baseX);
-      /* xAt() deviates by up to 1.4 * amp. Give the meander 60% of the room. */
-      amp = REDUCED ? 0 : Math.max(0, Math.min(gutter * 0.2, 12, room * 0.6 / 1.4));
-      bowR = Math.max(0, room - amp * 1.4);
-      bowL = Math.max(0, baseX - 4);
+      /* Centred, the constraint is the viewport rather than a text column, so
+         the meander can finally be wide enough to read as a drift. */
+      amp = REDUCED ? 0 : clamp(vw * 0.05, 16, 90);
+      bowR = bowL = Math.min(150, vw * 0.13);
+      edgeMin = 40;
+      edgeMax = Math.max(edgeMin + 1, vw - 40);
 
       if (grad) {
         grad.setAttribute("x1", "0");
@@ -98,13 +98,13 @@
     function xAt(docY) {
       if (REDUCED) return baseX;
       return baseX
-           + amp * Math.sin(docY / 300)
-           + amp * 0.4 * Math.sin(docY / 128 + 1.7);
+           + amp * Math.sin(docY / 380)
+           + amp * 0.4 * Math.sin(docY / 165 + 1.7);
     }
 
-    /* Final on-screen X: meander plus bow, held inside the gutter. */
+    /* Final on-screen X: meander plus bow, held inside the viewport. */
     function pos(docY, scrollY) {
-      return clamp(xAt(docY) + bowAt(docY, scrollY), 3, limit);
+      return clamp(xAt(docY) + bowAt(docY, scrollY), edgeMin, edgeMax);
     }
 
     /* ---------------------------------------------------------------
@@ -127,8 +127,8 @@
     function onPointer(e) {
       pointerX = e.clientX;
       pointerY = e.clientY;
-      /* Only wake up when the pointer is anywhere near the ribbon. */
-      bowTarget = pointerX < baseX + 260 ? 1 : 0;
+      /* Wake up when the pointer comes near the ribbon, either side of it. */
+      bowTarget = Math.abs(pointerX - baseX) < 420 ? 1 : 0;
     }
     function onPointerOut() { bowTarget = 0; }
 

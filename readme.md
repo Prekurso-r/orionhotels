@@ -58,6 +58,30 @@ eased channel so a card settles rather than snapping.
 brass extrusion, with each letter pushed further along Z and the whole word
 rotating to follow the pointer.
 
+**The star trail** (`trail.js`, home page only) draws a single luminous line
+down the centre of the whole page as you scroll, the way a long exposure
+records one star's path. Three things make it work:
+
+- It is composited with `mix-blend-mode: screen`, so it behaves like light
+  rather than paint. Down the centre it crosses the text column; screen
+  blending means it reads at full strength on the dark ground and saturates
+  to nothing over bright type. It cannot simply sit *behind* the content
+  instead — the marquee, CTA, testimonial band and footer all paint opaque
+  backgrounds that would hide it for most of the page.
+- The curve is a pure function of absolute document Y, drawn into a
+  viewport-sized fixed SVG that samples only the on-screen slice. A
+  9,000px-tall path would repaint its whole box on every scroll frame; this
+  costs the same regardless of page length.
+- The head is mapped from scroll *progress*, not a fixed viewport offset.
+  Anchoring it to `scrollY + 0.78vh` leaves the last screenful undrawn,
+  because the page stops scrolling before that point reaches the end.
+
+The line leans toward the cursor with a smoothstep falloff, and a marker per
+section ignites as the head passes. Markers are decorative and stay out of
+the tab order: those destinations are already in the nav and the footer.
+Below 860px the connecting line drops back, since a narrow column gives it
+no path that avoids running copy.
+
 ## How motion is split
 
 Anime.js drives every *discrete* transition — the preloader, the page-to-page
