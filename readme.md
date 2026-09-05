@@ -28,6 +28,8 @@ assets/css/pages.css           section components + the house photo grade
 assets/js/anime.iife.min.js    Anime.js v4.0.2, vendored (works offline)
 assets/js/orion.js             all site behaviour
 assets/js/starfield.js         the hero star field + constellation
+assets/js/trail.js             the star trail (home only)
+assets/css/trail.css           star trail styles (linked by index.html only)
 assets/img/favicon.svg         Orion glyph
 ```
 
@@ -62,12 +64,15 @@ rotating to follow the pointer.
 down the centre of the whole page as you scroll, the way a long exposure
 records one star's path. Three things make it work:
 
-- It is composited with `mix-blend-mode: screen`, so it behaves like light
-  rather than paint. Down the centre it crosses the text column; screen
-  blending means it reads at full strength on the dark ground and saturates
-  to nothing over bright type. It cannot simply sit *behind* the content
-  instead — the marquee, CTA, testimonial band and footer all paint opaque
-  backgrounds that would hide it for most of the page.
+- It sits at `z-index: -1`, behind every element on the page but still above
+  the page ground, so text glyphs, images and panels occlude it rather than
+  it being drawn over them. That only works because the decorative section
+  fills were removed: `.hero`, `.marquee`, the testimonial band, `.cta` and
+  `.footer` no longer paint an opaque panel, since an opaque panel in front
+  of the line is an opaque panel. Their borders carry those divisions, and
+  the tones they lost (`--c-void` / `--c-ink-2` against the `--c-ink` body)
+  differed by one or two values. **If you re-add a background to any of
+  those, the trail disappears behind it for that whole band.**
 - The curve is a pure function of absolute document Y, drawn into a
   viewport-sized fixed SVG that samples only the on-screen slice. A
   9,000px-tall path would repaint its whole box on every scroll frame; this
@@ -79,8 +84,10 @@ records one star's path. Three things make it work:
 The line leans toward the cursor with a smoothstep falloff, and a marker per
 section ignites as the head passes. Markers are decorative and stay out of
 the tab order: those destinations are already in the nav and the footer.
-Below 860px the connecting line drops back, since a narrow column gives it
-no path that avoids running copy.
+
+Solid objects — suite cards, stat cells, the grid-list, carousel plates —
+keep their fills, so the line passes behind them and re-emerges. That is the
+depth cue, not an oversight.
 
 ## How motion is split
 

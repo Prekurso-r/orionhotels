@@ -857,7 +857,8 @@ body.cursor-drag .cursor {
   overflow: hidden;
   padding-block: clamp(1.4rem, 2.6vw, 2.2rem);
   border-block: 1px solid var(--c-line-soft);
-  background: var(--c-ink-2);
+  /* No fill: the star trail sits at z-index -1, and an opaque panel here
+     would hide it for this whole band. The border carries the division. */
 }
 .marquee__track {
   display: flex;
@@ -904,7 +905,8 @@ body.cursor-drag .cursor {
    -------------------------------------------------------------------------- */
 .footer {
   position: relative;
-  background: var(--c-void);
+  /* No fill: the star trail sits at z-index -1, and an opaque panel here
+     would hide it for this whole band. The border carries the division. */
   border-top: 1px solid var(--c-line-soft);
   padding-top: clamp(4rem, 8vw, 7rem);
   overflow: hidden;
@@ -1078,7 +1080,8 @@ body.cursor-drag .cursor {
 .cta {
   position: relative;
   overflow: hidden;
-  background: var(--c-ink-2);
+  /* No fill: the star trail sits at z-index -1, and an opaque panel here
+     would hide it for this whole band. The border carries the division. */
   border-top: 1px solid var(--c-line-soft);
 }
 .cta__inner {
