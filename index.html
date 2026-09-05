@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ORION — Hotel &amp; Private Observatory, Atacama Highlands</title>
+<meta name="description" content="Orion is a forty-two suite hotel and private observatory at 2,410 metres in the Atacama Highlands of Chile. Since 1931, keeping the dark.">
+<meta name="theme-color" content="#04050a">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+<noscript><style>.curtain{display:none!important}.cursor,.cursor-dot{display:none}</style></noscript>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===== curtain / preloader ===================================== -->
+<div class="curtain" aria-hidden="true">
+  <div class="curtain__panels">
+    <div class="curtain__panel"></div>
+    <div class="curtain__panel"></div>
+    <div class="curtain__panel"></div>
+    <div class="curtain__panel"></div>
+    <div class="curtain__panel"></div>
+  </div>
+  <div class="loader">
+    <div class="loader__mark">ORION</div>
+    <div class="loader__sub">Atacama Highlands &middot; Chile</div>
+    <div class="loader__bar"><div class="loader__fill"></div></div>
+    <div class="loader__count">000</div>
+  </div>
+</div>
+
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ===== nav ===================================================== -->
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Orion — home">
+      <svg class="brand__glyph" viewBox="0 0 100 100" aria-hidden="true">
+        <line x1="30" y1="24" x2="52" y2="8"/><line x1="52" y1="8" x2="73" y2="20"/>
+        <line x1="30" y1="24" x2="39" y2="55"/><line x1="73" y1="20" x2="59" y2="47"/>
+        <line x1="39" y1="55" x2="49" y2="51"/><line x1="49" y1="51" x2="59" y2="47"/>
+        <line x1="39" y1="55" x2="36" y2="86"/><line x1="59" y1="47" x2="80" y2="80"/>
+        <circle cx="30" cy="24" r="4"/><circle cx="73" cy="20" r="3"/><circle cx="52" cy="8" r="2.4"/>
+        <circle cx="39" cy="55" r="3"/><circle cx="49" cy="51" r="3"/><circle cx="59" cy="47" r="3"/>
+        <circle cx="36" cy="86" r="3"/><circle cx="80" cy="80" r="4"/>
+      </svg>
+      <span>
+        <span class="brand__mark">ORION</span>
+        <span class="brand__sub">Est. 1931</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="suites.html">Suites</a>
+      <a class="nav__link" href="experiences.html">Experiences</a>
+      <a class="nav__link" href="gallery.html">Gallery</a>
+      <a class="nav__link" href="about.html">The House</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--sm nav__reserve" href="contact.html">Reserve<i class="btn__arrow"></i></a>
+      <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="orion-menu">
+        <span class="menu-btn__label">Menu</span>
+        <span class="menu-btn__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== fullscreen menu ========================================= -->
+<div class="menu" id="orion-menu" data-menu aria-hidden="true">
+  <div class="menu__veil"></div>
+  <div class="menu__inner">
+    <nav class="menu__list" aria-label="Full site">
+      <div class="menu__item"><a class="menu__anchor" href="index.html"><span class="menu__num">01</span>Home</a></div>
+      <div class="menu__item"><a class="menu__anchor" href="suites.html"><span class="menu__num">02</span>Suites</a></div>
+      <div class="menu__item"><a class="menu__anchor" href="experiences.html"><span class="menu__num">03</span>Experiences</a></div>
+      <div class="menu__item"><a class="menu__anchor" href="gallery.html"><span class="menu__num">04</span>Gallery</a></div>
+      <div class="menu__item"><a class="menu__anchor" href="about.html"><span class="menu__num">05</span>The House</a></div>
+      <div class="menu__item"><a class="menu__anchor" href="contact.html"><span class="menu__num">06</span>Reserve</a></div>
+    </nav>
+
+    <div class="menu__aside">
+      <figure class="menu__card">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="The west terrace at Orion after sunset." loading="lazy">
+        <figcaption>The west terrace, blue hour</figcaption>
+      </figure>
+      <dl class="menu__meta">
+        <div>
+          <dt>Reservations</dt>
+          <dd><a href="tel:+56552310931">+56 55 231 0931</a></dd>
+        </div>
+        <div>
+          <dt>Address</dt>
+          <dd>Camino del Alba s/n, Atacama Highlands, Chile</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="menu__foot">
+      <span>&copy; <span data-year>2026</span> Orion Hotel</span>
+      <div class="menu__social">
+        <a href="contact.html">Instagram</a>
+        <a href="contact.html">Journal</a>
+        <a href="contact.html">Press</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ===== hero ================================================== -->
+  <section class="hero" data-hero>
+    <div class="sky" data-sky aria-hidden="true">
+      <div class="sky__nebula sky__nebula--a"></div>
+      <div class="sky__nebula sky__nebula--b"></div>
+      <div class="sky__nebula sky__nebula--c"></div>
+      <div class="sky__tilt" data-sky-tilt>
+        <div class="constellation" data-constellation-wrap>
+          <svg data-constellation viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" role="img" aria-label="The constellation of Orion">
+            <path class="constellation__line" d="M30 24 L52 8 L73 20"/>
+            <path class="constellation__line" d="M30 24 L39 55"/>
+            <path class="constellation__line" d="M73 20 L59 47"/>
+            <path class="constellation__line" d="M39 55 L49 51 L59 47"/>
+            <path class="constellation__line" d="M39 55 L36 86"/>
+            <path class="constellation__line" d="M59 47 L80 80"/>
+            <path class="constellation__line constellation__line--faint" d="M49 51 L46 62 L45 69"/>
+
+            <circle class="constellation__halo" cx="30" cy="24" r="4.6"/>
+            <circle class="constellation__halo" cx="80" cy="80" r="4.2"/>
+            <circle class="constellation__star" cx="30" cy="24" r="1.5"/>
+            <circle class="constellation__star" cx="73" cy="20" r="1.15"/>
+            <circle class="constellation__star" cx="52" cy="8"  r="0.8"/>
+            <circle class="constellation__star" cx="39" cy="55" r="1.05"/>
+            <circle class="constellation__star" cx="49" cy="51" r="1.15"/>
+            <circle class="constellation__star" cx="59" cy="47" r="1.05"/>
+            <circle class="constellation__star" cx="36" cy="86" r="0.95"/>
+            <circle class="constellation__star" cx="80" cy="80" r="1.45"/>
+            <circle class="constellation__star" cx="46" cy="62" r="0.5"/>
+            <circle class="constellation__star" cx="45" cy="69" r="0.42"/>
+
+            <text class="constellation__label" x="25" y="20" text-anchor="end">Betelgeuse</text>
+            <text class="constellation__label" x="85" y="82">Rigel</text>
+            <text class="constellation__label" x="52" y="45" text-anchor="middle">The Belt</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__grad" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="wrap">
+        <p class="eyebrow hero__eyebrow" data-anim>Atacama Highlands &middot; Chile &middot; 2,410 m</p>
+
+        <h1 class="hero__title">
+          <span class="line"><span>Sleep beneath</span></span>
+          <span class="line"><span>the <em>clearest sky</em></span></span>
+          <span class="line"><span>on earth.</span></span>
+        </h1>
+
+        <p class="lead hero__body" data-anim>
+          Forty-two suites, a working observatory and a kitchen that cooks to the
+          lunar calendar. Orion has been keeping the dark since 1931.
+        </p>
+
+        <div class="hero__actions" data-anim>
+          <a class="btn btn--solid" href="contact.html">Reserve a suite<i class="btn__arrow"></i></a>
+          <a class="tlink" href="#house">Read the house note</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue" data-anim>
+      <span class="scroll-cue__line"></span>
+      Scroll
+    </div>
+
+    <div class="hero__rail" data-anim>
+      <div class="wrap hero__rail-inner">
+        <div class="hero__rail-facts">
+          <span><b>42</b> Suites</span>
+          <span><b>2,410 m</b> Elevation</span>
+          <span><b>320</b> Clear nights a year</span>
+          <span><b>1</b> Private observatory</span>
+        </div>
+        <a class="tlink" href="suites.html">Rates &amp; availability</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ribbon ================================================ -->
+  <div class="marquee" data-marquee data-marquee-speed="46" aria-hidden="true">
+    <div class="marquee__track">
+      <div class="marquee__group">
+        <span class="marquee__item">Relais &amp; Châteaux</span>
+        <span class="marquee__item">Dark Sky Sanctuary</span>
+        <span class="marquee__item">Est. MCMXXXI</span>
+        <span class="marquee__item">Two Michelin Stars</span>
+        <span class="marquee__item">Forty-two Suites</span>
+        <span class="marquee__item">Private Observatory</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== the house ============================================= -->
+  <section class="section" id="house">
+    <div class="wrap">
+      <div class="intro">
+        <div class="intro__copy">
+          <p class="eyebrow" data-reveal data-reveal-delay="0">The house</p>
+          <h2 class="h2" data-reveal="lines">
+            <span class="line"><span>A station for looking</span></span>
+            <span class="line"><span>up, that happens to</span></span>
+            <span class="line"><span><em class="italic gold">have beds.</em></span></span>
+          </h2>
+          <div data-reveal data-reveal-delay="180">
+            <p class="body-text dropcap">
+              The observatory came first. In 1931 a Belgian cartographer named Hélène Roux
+              hauled a nine-inch refractor up the Camino del Alba because the air here holds
+              almost no water, and water is what blurs a star. She built four rooms beside the
+              dome so her assistants would not have to descend at dawn.
+            </p>
+            <p class="body-text">
+              Those four rooms are now forty-two. The telescope still works. Everything we have
+              added since — the kitchen, the baths cut into the rock, the long room with its
+              brass and its silence — was added on one condition: <strong>that it never spills
+              light onto the sky.</strong>
+            </p>
+          </div>
+          <div data-reveal data-reveal-delay="280">
+            <a class="tlink" href="about.html">The full history</a>
+          </div>
+        </div>
+
+        <div class="photostack scene" data-reveal="z" data-reveal-delay="120">
+          <figure class="photostack__item photostack__item--a" data-parallax="-26">
+            <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="The long room at Orion, lined in brass and dark stone." loading="lazy">
+          </figure>
+          <figure class="photostack__item photostack__item--b" data-parallax="34">
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="The brass bar, bottles lit from below." loading="lazy">
+          </figure>
+          <figure class="photostack__item photostack__item--c" data-parallax="-14">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="A suite bedroom in dark wood, lit low." loading="lazy">
+          </figure>
+          <div class="photostack__badge">
+            <b>1931</b>
+            <span>Since</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== suites preview ======================================== -->
+  <section class="section section--flush-top">
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <div class="stack">
+          <p class="eyebrow" data-reveal>The rooms</p>
+          <h2 class="h2" data-reveal="lines">
+            <span class="line"><span>Forty-two ways to</span></span>
+            <span class="line"><span>lose an evening.</span></span>
+          </h2>
+        </div>
+        <div class="stack" data-reveal data-reveal-delay="160">
+          <p class="body-text">
+            Every suite faces east, away from the road and the one streetlamp in the valley.
+            Blackout is not a curtain here; it is the architecture.
+          </p>
+          <a class="tlink" href="suites.html">All suites &amp; rates</a>
+        </div>
+      </div>
+
+      <div class="cards" data-reveal="stagger" data-reveal-stagger="140">
+        <article class="tilt" data-tilt="8">
+          <a class="tilt__inner" data-tilt-inner href="suites.html">
+            <div class="card">
+              <div class="card__media">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="The Belt Suite, with a low bed beneath a wide east window." loading="lazy">
+              </div>
+              <span class="card__sheen" aria-hidden="true"></span>
+              <span class="card__corner">01</span>
+              <div class="card__body">
+                <div class="card__kicker"><span>The Belt</span><span>from $940</span></div>
+                <h3 class="card__title">Belt Suite</h3>
+                <p class="card__desc">58 m². Three east windows, a stone bath, and a ceiling hatch that opens on the sky above the bed.</p>
+                <span class="card__cta">View suite <i></i></span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="tilt" data-tilt="8">
+          <a class="tilt__inner" data-tilt-inner href="suites.html">
+            <div class="card">
+              <div class="card__media">
+                <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Rigel Terrace, a bed set out on a private stone terrace facing the range." loading="lazy">
+              </div>
+              <span class="card__sheen" aria-hidden="true"></span>
+              <span class="card__corner">02</span>
+              <div class="card__body">
+                <div class="card__kicker"><span>Terrace</span><span>from $1,380</span></div>
+                <h3 class="card__title">Rigel Terrace</h3>
+                <p class="card__desc">86 m² and a walled terrace with a heated plunge, a fire bowl and two reclining chairs that point south.</p>
+                <span class="card__cta">View suite <i></i></span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="tilt" data-tilt="8">
+          <a class="tilt__inner" data-tilt-inner href="suites.html">
+            <div class="card">
+              <div class="card__media">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="The Betelgeuse Loft under the original observatory roofline." loading="lazy">
+              </div>
+              <span class="card__sheen" aria-hidden="true"></span>
+              <span class="card__corner">03</span>
+              <div class="card__body">
+                <div class="card__kicker"><span>The Loft</span><span>from $2,150</span></div>
+                <h3 class="card__title">Betelgeuse Loft</h3>
+                <p class="card__desc">The old plate room, 132 m² under the original trusses. Sleeps four. The dome is nineteen steps away.</p>
+                <span class="card__cta">View suite <i></i></span>
+              </div>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== observatory =========================================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature__copy">
+          <p class="eyebrow" data-reveal>The dome</p>
+          <h2 class="h2" data-reveal="lines">
+            <span class="line"><span>Nine inches of Belgian</span></span>
+            <span class="line"><span>glass, and no queue.</span></span>
+          </h2>
+          <div data-reveal data-reveal-delay="140">
+            <p class="body-text">
+              Roux's refractor is still mounted on its original pier, now driven by a motor
+              instead of a hand crank. Guests book it the way they would book a table: by the
+              hour, from nine until the small hours, with a resident astronomer if you want one
+              and nobody at all if you don't.
+            </p>
+          </div>
+          <dl class="specs" data-reveal="stagger" data-reveal-stagger="70">
+            <div><dt>Instrument</dt><dd>229 mm Zeiss refractor, 1931</dd></div>
+            <div><dt>Seeing</dt><dd>0.6&Prime; median &middot; Bortle 1</dd></div>
+            <div><dt>Sessions</dt><dd>Hourly, 21:00 &ndash; 03:00</dd></div>
+            <div><dt>Guiding</dt><dd>Resident astronomer, on request</dd></div>
+          </dl>
+          <div data-reveal data-reveal-delay="200">
+            <a class="btn btn--ghost" href="experiences.html">Book the dome<i class="btn__arrow"></i></a>
+          </div>
+        </div>
+
+        <div class="feature__visual" data-reveal="z">
+          <figure class="feature__plate feature__plate--main" data-parallax="-30">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&amp;fit=crop&amp;w=1100&amp;q=80" alt="The Milky Way over the range, seen from the observatory terrace." loading="lazy">
+          </figure>
+          <figure class="feature__plate feature__plate--sub" data-parallax="40">
+            <img src="https://images.unsplash.com/photo-1543722530-d2c3201371e7?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Andromeda, as the refractor shows it." loading="lazy">
+          </figure>
+          <span class="feature__tag">Bortle Class 1</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== stats ================================================= -->
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="stats" data-reveal="stagger" data-reveal-stagger="90">
+        <div class="stat">
+          <span class="stat__num" data-count="42">42</span>
+          <span class="stat__label">Suites &amp; lofts</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="320">320</span>
+          <span class="stat__label">Clear nights a year</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="2410">2410</span>
+          <span class="stat__label">Metres above the sea</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="94" data-count-suffix="%">94%</span>
+          <span class="stat__label">Guests who return</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== experiences =========================================== -->
+  <section class="section section--flush-top">
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <div class="stack">
+          <p class="eyebrow" data-reveal>The days</p>
+          <h2 class="h2" data-reveal="lines">
+            <span class="line"><span>What there is</span></span>
+            <span class="line"><span>to do, and not do.</span></span>
+          </h2>
+        </div>
+        <div class="stack" data-reveal data-reveal-delay="140">
+          <p class="body-text">Six things we are good at. Everything else, we will happily arrange and quietly stay out of.</p>
+          <a class="tlink" href="experiences.html">All experiences</a>
+        </div>
+      </div>
+
+      <div class="grid-list" data-reveal="stagger" data-reveal-stagger="80">
+        <article class="grid-list__cell">
+          <span class="grid-list__num">01</span>
+          <h3 class="grid-list__title">Night sessions</h3>
+          <p>An hour at the refractor, or four. Deep sky in winter, planets in summer, and a thermos of hot chocolate either way.</p>
+        </article>
+        <article class="grid-list__cell">
+          <span class="grid-list__num">02</span>
+          <h3 class="grid-list__title">The salt flats</h3>
+          <p>Out at 05:20 in a canvas-topped Land Cruiser, back by ten with flamingos seen and breakfast eaten on a folding table.</p>
+        </article>
+        <article class="grid-list__cell">
+          <span class="grid-list__num">03</span>
+          <h3 class="grid-list__title">Table Nine</h3>
+          <p>Twelve seats facing the pass. A tasting menu written each morning against whatever the altiplano growers brought up.</p>
+        </article>
+        <article class="grid-list__cell">
+          <span class="grid-list__num">04</span>
+          <h3 class="grid-list__title">The rock baths</h3>
+          <p>Three pools cut into the hillside at 38, 34 and 12 degrees, fed by the same spring that supplies the kitchen.</p>
+        </article>
+        <article class="grid-list__cell">
+          <span class="grid-list__num">05</span>
+          <h3 class="grid-list__title">Silent hours</h3>
+          <p>From 23:00 the house lights drop to amber and stay there. No music, no screens in the public rooms. It is the best thing we do.</p>
+        </article>
+        <article class="grid-list__cell">
+          <span class="grid-list__num">06</span>
+          <h3 class="grid-list__title">The long walk</h3>
+          <p>Eleven kilometres along the old mule track to the abandoned nitrate station, with a guide who knows where the water is.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3D carousel =========================================== -->
+  <section class="section" id="frames">
+    <div class="wrap">
+      <div class="section-head section-head--center">
+        <p class="eyebrow eyebrow--center" data-reveal>The house in eight frames</p>
+        <h2 class="h2" data-reveal="lines" style="max-width:16ch">
+          <span class="line"><span>Turn it over</span></span>
+          <span class="line"><span>in your hands.</span></span>
+        </h2>
+        <p class="body-text" data-reveal data-reveal-delay="140" style="text-align:center;margin-inline:auto">
+          Drag the ring, or use the arrows.
+        </p>
+      </div>
+
+      <div class="carousel" data-carousel data-reveal="fade">
+        <div class="carousel__stage" data-carousel-stage tabindex="0" role="group" aria-label="Gallery carousel — drag or use arrow keys">
+          <div class="carousel__ring" data-carousel-ring>
+            <div class="carousel__cell"><figure class="carousel__plate">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="The long room" loading="lazy">
+              <figcaption><b>The Long Room</b><span>Ground floor</span></figcaption>
+            </figure></div>
+            <div class="carousel__cell"><figure class="carousel__plate">
+              <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Table Nine at dusk" loading="lazy">
+              <figcaption><b>Table Nine</b><span>The kitchen</span></figcaption>
+            </figure></div>
+            <div class="carousel__cell"><figure class="carousel__plate">
+              <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="The cold pool at dusk" loading="lazy">
+              <figcaption><b>The Cold Pool</b><span>Rock baths</span></figcaption>
+            </figure></div>
+            <div class="carousel__cell"><figure class="carousel__plate">
+              <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="Suite twenty-one" loading="lazy">
+              <figcaption><b>Suite Twenty-One</b><span>East wing</span></figcaption>
+            </figure></div>
+            <div class="carousel__cell"><figure class="carousel__plate">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="The brass bar" loading="lazy">
+              <figcaption><b>The Brass Bar</b><span>Until late</span></figcaption>
+            </figure></div>
+            <div class="carousel__cell"><figure class="carousel__plate">
+              <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="The dune road west of the house" loading="lazy">
+              <figcaption><b>Dune Road</b><span>Nine km west</span></figcaption>
+            </figure></div>
+            <div class="carousel__cell"><figure class="carousel__plate">
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="The terrace above the cloud line" loading="lazy">
+              <figcaption><b>The Terrace</b><span>2,410 m</span></figcaption>
+            </figure></div>
+            <div class="carousel__cell"><figure class="carousel__plate">
+              <img src="https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?auto=format&amp;fit=crop&amp;w=700&amp;q=80" alt="The dome at night" loading="lazy">
+              <figcaption><b>The Dome</b><span>21:00 &ndash; 03:00</span></figcaption>
+            </figure></div>
+          </div>
+        </div>
+
+        <div class="carousel__ui">
+          <button class="carousel__btn" type="button" data-carousel-prev aria-label="Previous frame">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 4L7 12l8 8" stroke="currentColor" stroke-width="1.4"/></svg>
+          </button>
+          <span class="carousel__readout" data-carousel-readout aria-live="polite"><b>01</b> / 08</span>
+          <button class="carousel__btn" type="button" data-carousel-next aria-label="Next frame">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 4l8 8-8 8" stroke="currentColor" stroke-width="1.4"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== testimonials ========================================== -->
+  <section class="section" style="background:var(--c-ink-2);border-block:1px solid var(--c-line-soft)">
+    <div class="wrap wrap--mid">
+      <div class="quotes" data-quotes>
+        <div class="section-head section-head--center" style="margin-bottom:clamp(2rem,4vw,3rem)">
+          <span class="stars-row" data-reveal aria-label="Five out of five">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+        </div>
+
+        <div class="quotes__stage">
+          <blockquote class="quote">
+            <p class="quote__text">We came for two nights and rebooked from the terrace on the first one.</p>
+            <div class="quote__by"><b>Condé Nast Traveller</b><span>Gold List, 2025</span></div>
+          </blockquote>
+          <blockquote class="quote" hidden>
+            <p class="quote__text">I have never been anywhere that took darkness this seriously, or hospitality this lightly.</p>
+            <div class="quote__by"><b>Yuki Nakamura</b><span>Suite 14 &middot; four returns</span></div>
+          </blockquote>
+          <blockquote class="quote" hidden>
+            <p class="quote__text">The kitchen is worth the flight. The sky is worth the kitchen.</p>
+            <div class="quote__by"><b>The World's 50 Best</b><span>Table Nine, no. 31</span></div>
+          </blockquote>
+        </div>
+
+        <div class="quotes__nav">
+          <button class="quotes__dot is-active" type="button" aria-label="Quote one"></button>
+          <button class="quotes__dot" type="button" aria-label="Quote two"></button>
+          <button class="quotes__dot" type="button" aria-label="Quote three"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA =================================================== -->
+  <section class="cta">
+    <span class="cta__glow" aria-hidden="true"></span>
+    <div class="wrap cta__inner">
+      <p class="eyebrow eyebrow--center" data-reveal>Reservations</p>
+      <h2 class="h2 cta__title" data-reveal="lines">
+        <span class="line"><span>The new moon is</span></span>
+        <span class="line"><span><em class="italic gold">the one to book.</em></span></span>
+      </h2>
+      <p class="body-text" data-reveal data-reveal-delay="120" style="text-align:center;margin-inline:auto">
+        Two nights minimum. Rates include the dome, the baths and breakfast for as long
+        as you can stay awake for it.
+      </p>
+      <div class="cta__actions" data-reveal data-reveal-delay="200">
+        <a class="btn btn--solid" href="contact.html">Check availability<i class="btn__arrow"></i></a>
+        <a class="btn btn--ghost" href="suites.html">Compare suites<i class="btn__arrow"></i></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== footer ================================================== -->
+<footer class="footer">
+  <span class="footer__glow" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__intro">
+        <a class="brand" href="index.html" aria-label="Orion — home">
+          <span class="brand__mark">ORION</span>
+        </a>
+        <p>A hotel and private observatory at 2,410 metres in the Atacama Highlands of Chile. Keeping the dark since 1931.</p>
+        <form class="footer__signup" data-signup novalidate>
+          <label class="sr-only" for="footer-email">Email address</label>
+          <input id="footer-email" type="email" name="email" placeholder="Your email" autocomplete="email">
+          <button type="submit">Join</button>
+        </form>
+        <p class="footer__note">The Orion letter, four times a year. Nothing else.</p>
+      </div>
+
+      <div class="footer__col">
+        <h3>Visit</h3>
+        <ul>
+          <li><a href="suites.html">Suites &amp; rates</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="experiences.html">Table Nine</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>House</h3>
+        <ul>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="about.html">The observatory</a></li>
+          <li><a href="about.html">People</a></li>
+          <li><a href="contact.html">Press &amp; enquiries</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Find us</h3>
+        <ul>
+          <li><address>Camino del Alba s/n<br>Atacama Highlands<br>Antofagasta, Chile</address></li>
+          <li><a href="tel:+56552310931">+56 55 231 0931</a></li>
+          <li><a href="mailto:stay@orion.example">stay@orion.example</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__wordmark" aria-hidden="true">ORION</div>
+
+  <div class="wrap">
+    <div class="footer__base">
+      <span>&copy; <span data-year>2026</span> Orion Hotel &amp; Observatory</span>
+      <span>Designed for the dark</span>
+      <span><a href="contact.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="contact.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/anime.iife.min.js"></script>
+<script src="assets/js/starfield.js"></script>
+<script src="assets/js/orion.js"></script>
+</body>
+</html>

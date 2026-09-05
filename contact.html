@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reserve — ORION</title>
+<meta name="description" content="Enquire about a stay at Orion. A real person replies within one working day, with availability and a note on what the moon is doing.">
+<meta name="theme-color" content="#04050a">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+<noscript><style>.curtain{display:none!important}.cursor,.cursor-dot{display:none}</style></noscript>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===== curtain / preloader ===================================== -->
+<div class="curtain" aria-hidden="true">
+  <div class="curtain__panels">
+    <div class="curtain__panel"></div>
+    <div class="curtain__panel"></div>
+    <div class="curtain__panel"></div>
+    <div class="curtain__panel"></div>
+    <div class="curtain__panel"></div>
+  </div>
+  <div class="loader">
+    <div class="loader__mark">ORION</div>
+    <div class="loader__sub">Atacama Highlands &middot; Chile</div>
+    <div class="loader__bar"><div class="loader__fill"></div></div>
+    <div class="loader__count">000</div>
+  </div>
+</div>
+
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ===== nav ===================================================== -->
+<header class="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Orion — home">
+      <svg class="brand__glyph" viewBox="0 0 100 100" aria-hidden="true">
+        <line x1="30" y1="24" x2="52" y2="8"/><line x1="52" y1="8" x2="73" y2="20"/>
+        <line x1="30" y1="24" x2="39" y2="55"/><line x1="73" y1="20" x2="59" y2="47"/>
+        <line x1="39" y1="55" x2="49" y2="51"/><line x1="49" y1="51" x2="59" y2="47"/>
+        <line x1="39" y1="55" x2="36" y2="86"/><line x1="59" y1="47" x2="80" y2="80"/>
+        <circle cx="30" cy="24" r="4"/><circle cx="73" cy="20" r="3"/><circle cx="52" cy="8" r="2.4"/>
+        <circle cx="39" cy="55" r="3"/><circle cx="49" cy="51" r="3"/><circle cx="59" cy="47" r="3"/>
+        <circle cx="36" cy="86" r="3"/><circle cx="80" cy="80" r="4"/>
+      </svg>
+      <span>
+        <span class="brand__mark">ORION</span>
+        <span class="brand__sub">Est. 1931</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="suites.html">Suites</a>
+      <a class="nav__link" href="experiences.html">Experiences</a>
+      <a class="nav__link" href="gallery.html">Gallery</a>
+      <a class="nav__link" href="about.html">The House</a>
+    </nav>
+
+    <div class="nav__actions">
+      <a class="btn btn--sm nav__reserve" href="contact.html">Reserve<i class="btn__arrow"></i></a>
+      <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="orion-menu">
+        <span class="menu-btn__label">Menu</span>
+        <span class="menu-btn__bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== fullscreen menu ========================================= -->
+<div class="menu" id="orion-menu" data-menu aria-hidden="true">
+  <div class="menu__veil"></div>
+  <div class="menu__inner">
+    <nav class="menu__list" aria-label="Full site">
+      <div class="menu__item"><a class="menu__anchor" href="index.html"><span class="menu__num">01</span>Home</a></div>
+      <div class="menu__item"><a class="menu__anchor" href="suites.html"><span class="menu__num">02</span>Suites</a></div>
+      <div class="menu__item"><a class="menu__anchor" href="experiences.html"><span class="menu__num">03</span>Experiences</a></div>
+      <div class="menu__item"><a class="menu__anchor" href="gallery.html"><span class="menu__num">04</span>Gallery</a></div>
+      <div class="menu__item"><a class="menu__anchor" href="about.html"><span class="menu__num">05</span>The House</a></div>
+      <div class="menu__item"><a class="menu__anchor" href="contact.html"><span class="menu__num">06</span>Reserve</a></div>
+    </nav>
+
+    <div class="menu__aside">
+      <figure class="menu__card">
+        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="The west terrace at Orion after sunset." loading="lazy">
+        <figcaption>The west terrace, blue hour</figcaption>
+      </figure>
+      <dl class="menu__meta">
+        <div>
+          <dt>Reservations</dt>
+          <dd><a href="tel:+56552310931">+56 55 231 0931</a></dd>
+        </div>
+        <div>
+          <dt>Address</dt>
+          <dd>Camino del Alba s/n, Atacama Highlands, Chile</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="menu__foot">
+      <span>&copy; <span data-year>2026</span> Orion Hotel</span>
+      <div class="menu__social">
+        <a href="contact.html">Instagram</a>
+        <a href="contact.html">Journal</a>
+        <a href="contact.html">Press</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ===== page hero ============================================= -->
+  <section class="phero">
+    <div class="phero__bg" data-parallax="70" data-parallax-scale="0.06">
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&amp;fit=crop&amp;w=1800&amp;q=80" alt="The range above the cloud line, seen from the drive.">
+    </div>
+    <div class="wrap phero__inner">
+      <nav class="crumbs" data-anim aria-label="Breadcrumb"><a href="index.html">Orion</a> <span>/</span> <span>Reserve</span></nav>
+      <h1 class="display phero__title">
+        <span class="line"><span>Tell us when,</span></span>
+        <span class="line"><span><em class="italic gold">and how dark.</em></span></span>
+      </h1>
+      <p class="phero__meta" data-anim>
+        <span>Reply within one working day</span>
+        <span>Two-night minimum</span>
+        <span>No deposit until we confirm</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== booking =============================================== -->
+  <section class="section">
+    <div class="wrap">
+      <div class="book">
+        <div>
+          <div class="section-head" style="margin-bottom:clamp(2rem,4vw,3rem)">
+            <p class="eyebrow" data-reveal>Enquire</p>
+            <h2 class="h2" data-reveal="lines">
+              <span class="line"><span>A real person reads</span></span>
+              <span class="line"><span>every one of these.</span></span>
+            </h2>
+            <p class="body-text" data-reveal data-reveal-delay="120">
+              Usually Camila, usually before lunch. If you are chasing a particular moon phase,
+              say so — it is the single most useful thing you can tell us.
+            </p>
+          </div>
+
+          <form class="form" data-form novalidate data-reveal="stagger" data-reveal-stagger="60">
+            <div class="field">
+              <label for="firstName">First name</label>
+              <input id="firstName" name="firstName" type="text" autocomplete="given-name" placeholder="Hélène" required>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <label for="lastName">Last name</label>
+              <input id="lastName" name="lastName" type="text" autocomplete="family-name" placeholder="Roux" required>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <label for="phone">Telephone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional">
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <label for="arrive">Arriving</label>
+              <input id="arrive" name="arrive" type="date" required>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <label for="depart">Departing</label>
+              <input id="depart" name="depart" type="date" required>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <label for="room">Room</label>
+              <select id="room" name="room" required>
+                <option value="">Select a room</option>
+                <option>The Belt Suite &mdash; $940</option>
+                <option>Rigel Terrace &mdash; $1,380</option>
+                <option>Betelgeuse Loft &mdash; $2,150</option>
+                <option>The Saiph Room &mdash; $780</option>
+                <option>Mintaka Terrace &mdash; $1,240</option>
+                <option>The Meissa Apartment &mdash; $2,900</option>
+                <option>Let us suggest one</option>
+              </select>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <label for="guests">Guests</label>
+              <select id="guests" name="guests" required>
+                <option value="">Select</option>
+                <option>One</option>
+                <option>Two</option>
+                <option>Three</option>
+                <option>Four</option>
+                <option>Five or more</option>
+              </select>
+              <span class="field__error"></span>
+            </div>
+            <div class="field field--full">
+              <label for="notes">Anything we should know</label>
+              <textarea id="notes" name="notes" rows="4" placeholder="Moon phase, Table Nine, dietary needs, an anniversary, a first telescope."></textarea>
+              <span class="field__error"></span>
+            </div>
+
+            <div class="form__submit">
+              <button class="btn btn--solid" type="submit">Send enquiry<i class="btn__arrow"></i></button>
+              <p class="form__fine">
+                No payment is taken here. We reply with availability and a hold; the deposit
+                comes after you have said yes.
+              </p>
+            </div>
+
+            <div class="form-success" data-form-success role="status">
+              <p class="eyebrow">Received</p>
+              <h3 class="h3">Thank you, <span data-form-name>traveller</span>.</h3>
+              <p class="body-text">
+                Your enquiry is with the desk. You will hear back within one working day, from
+                a person, with the rooms that are actually free on those dates and a note on
+                what the moon is doing.
+              </p>
+              <a class="tlink" href="index.html">Back to the house</a>
+            </div>
+          </form>
+        </div>
+
+        <aside class="aside-panel" data-reveal="z" data-reveal-delay="140">
+          <div class="aside-panel__media">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="The long room, where the desk is." loading="lazy">
+          </div>
+          <dl>
+            <div>
+              <dt>Reservations</dt>
+              <dd>
+                <a href="tel:+56552310931">+56 55 231 0931</a><br>
+                <a href="mailto:stay@orion.example">stay@orion.example</a><br>
+                08:00 &ndash; 21:00 CLT, daily
+              </dd>
+            </div>
+            <div>
+              <dt>The house</dt>
+              <dd>
+                Camino del Alba s/n<br>
+                Atacama Highlands<br>
+                Antofagasta Region, Chile
+              </dd>
+            </div>
+            <div>
+              <dt>Press &amp; partnerships</dt>
+              <dd><a href="mailto:press@orion.example">press@orion.example</a></dd>
+            </div>
+            <div>
+              <dt>Table Nine</dt>
+              <dd>Twelve seats, 20:30, Tuesday to Sunday. Resident guests are seated first; outside bookings open fourteen days ahead.</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== getting here ========================================== -->
+  <section class="section section--flush-top">
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <div class="stack">
+          <p class="eyebrow" data-reveal>Getting here</p>
+          <h2 class="h2" data-reveal="lines">
+            <span class="line"><span>It is meant to be</span></span>
+            <span class="line"><span>slightly difficult.</span></span>
+          </h2>
+        </div>
+        <div class="stack" data-reveal data-reveal-delay="140">
+          <p class="body-text">
+            Darkness this good is only found a long way from everything, which is the whole
+            point and also the whole inconvenience. We meet every arrival.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-list" data-reveal="stagger" data-reveal-stagger="80">
+        <article class="grid-list__cell">
+          <span class="grid-list__num">01</span>
+          <h3 class="grid-list__title">By air</h3>
+          <p>Fly to Calama (CJC), two hours from Santiago. We collect you at arrivals — look for the amber sign, not a name board. Ninety minutes to the house.</p>
+        </article>
+        <article class="grid-list__cell">
+          <span class="grid-list__num">02</span>
+          <h3 class="grid-list__title">By road</h3>
+          <p>Route 23 to the Camino del Alba turning, then eleven kilometres of graded track. Any car will do it in daylight. Please do not attempt it after dark on your first visit.</p>
+        </article>
+        <article class="grid-list__cell">
+          <span class="grid-list__num">03</span>
+          <h3 class="grid-list__title">The altitude</h3>
+          <p>2,410 metres. Most guests feel it for half a day. Arrive hydrated, go slowly on the first evening, and leave the dome for your second night if you can.</p>
+        </article>
+        <article class="grid-list__cell">
+          <span class="grid-list__num">04</span>
+          <h3 class="grid-list__title">When to come</h3>
+          <p>April to September for the deep sky and cold, clear nights. December to February is warmer, greener and busier. New moons book eleven months ahead.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== footer ================================================== -->
+<footer class="footer">
+  <span class="footer__glow" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__intro">
+        <a class="brand" href="index.html" aria-label="Orion — home">
+          <span class="brand__mark">ORION</span>
+        </a>
+        <p>A hotel and private observatory at 2,410 metres in the Atacama Highlands of Chile. Keeping the dark since 1931.</p>
+        <form class="footer__signup" data-signup novalidate>
+          <label class="sr-only" for="footer-email">Email address</label>
+          <input id="footer-email" type="email" name="email" placeholder="Your email" autocomplete="email">
+          <button type="submit">Join</button>
+        </form>
+        <p class="footer__note">The Orion letter, four times a year. Nothing else.</p>
+      </div>
+
+      <div class="footer__col">
+        <h3>Visit</h3>
+        <ul>
+          <li><a href="suites.html">Suites &amp; rates</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="experiences.html">Table Nine</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>House</h3>
+        <ul>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="about.html">The observatory</a></li>
+          <li><a href="about.html">People</a></li>
+          <li><a href="contact.html">Press &amp; enquiries</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Find us</h3>
+        <ul>
+          <li><address>Camino del Alba s/n<br>Atacama Highlands<br>Antofagasta, Chile</address></li>
+          <li><a href="tel:+56552310931">+56 55 231 0931</a></li>
+          <li><a href="mailto:stay@orion.example">stay@orion.example</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__wordmark" aria-hidden="true">ORION</div>
+
+  <div class="wrap">
+    <div class="footer__base">
+      <span>&copy; <span data-year>2026</span> Orion Hotel &amp; Observatory</span>
+      <span>Designed for the dark</span>
+      <span><a href="contact.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="contact.html">Terms</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/anime.iife.min.js"></script>
+<script src="assets/js/orion.js"></script>
+</body>
+</html>
